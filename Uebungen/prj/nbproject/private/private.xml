@@ -3,9 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Rafael/Desktop/java_uebungen/Uebungen/src/Lernen/PytTripLernen1/calc/NewClass.java</file>
-            <file>file:/C:/Users/Rafael/Desktop/java_uebungen/Uebungen/src/ue10a/gui/PerfekteZahlenGuiVerion2.java</file>
-            <file>file:/C:/Users/Rafael/Desktop/java_uebungen/Uebungen/src/ue10a/calc/PerfekteZahlenRechnerVersion2.java</file>
+            <file>file:/C:/Users/Rafael/Desktop/java_uebungen/Uebungen/src/Lernen/Raumdiagonale/data/QuaderGanzzahlig.java</file>
+            <file>file:/C:/Users/Rafael/Desktop/java_uebungen/Uebungen/src/Lernen/Raumdiagonale/gui/QuaderGanzzahligModel.java</file>
+            <file>file:/C:/Users/Rafael/Desktop/java_uebungen/Uebungen/src/Lernen/Raumdiagonale/gui/QuaderGanzzahligGUI.java</file>
+            <file>file:/C:/Users/Rafael/Desktop/java_uebungen/Uebungen/src/Lernen/Raumdiagonale/calc/QuaderGanzzahligRechner.java</file>
         </group>
     </open-files>
 </project-private>

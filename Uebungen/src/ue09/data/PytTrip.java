@@ -34,12 +34,8 @@ public class PytTrip {
         return c;
     }
 
-    public Object[] size() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
-    @Override // Annotation "Überlagerung"
+    @Override
     public String toString() {
-      return String.format("%8d %8d %8d", a, b, c);
+        return String.format("%d : %d : %d", a, b, c);
     }
 }

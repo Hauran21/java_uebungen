@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package ue09.gui;
 
 import java.util.ArrayList;
@@ -21,7 +17,6 @@ import ue09.data.PytTrip;
  */
 public class PytTripGui extends javax.swing.JFrame
 {
-
   /**
    * Creates new form PytTripGui
    */
@@ -304,8 +299,6 @@ public class PytTripGui extends javax.swing.JFrame
     
   }
     
-  
-  
   private void onBerechnen(java.awt.event.ActionEvent evt)//GEN-FIRST:event_onBerechnen
   {//GEN-HEADEREND:event_onBerechnen
     try
@@ -383,6 +376,7 @@ public class PytTripGui extends javax.swing.JFrame
     /* Create and display the form */
     java.awt.EventQueue.invokeLater(new Runnable()
     {
+      @Override
       public void run()
       {
         new PytTripGui().setVisible(true);
