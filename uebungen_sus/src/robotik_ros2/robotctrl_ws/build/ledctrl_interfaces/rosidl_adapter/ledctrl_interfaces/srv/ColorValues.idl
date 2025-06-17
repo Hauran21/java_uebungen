@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from ledctrl_interfaces/srv/ColorValues.srv
+// generated code does not contain a copyright notice
+
+
+module ledctrl_interfaces {
+  module srv {
+    struct ColorValues_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct ColorValues_Response {
+      @verbatim (language="comment", text=
+        "LED-Nr. and RGBW values for each LED")
+      sequence<uint8> colors;
+
+      boolean status;
+    };
+  };
+};

@@ -1,0 +1,3 @@
+/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/robotctrl_ws/build/ledctrl_interfaces/rosidl_adapter/ledctrl_interfaces:srv/CameraCmd.idl
+/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/robotctrl_ws/build/ledctrl_interfaces/rosidl_adapter/ledctrl_interfaces:srv/BacklightValue.idl
+/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/robotctrl_ws/build/ledctrl_interfaces/rosidl_adapter/ledctrl_interfaces:srv/ColorValues.idl

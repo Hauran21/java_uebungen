@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.java.j2seproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
+            <name>Uebungen-ROS2_SuS</name>
+            <source-roots>
+                <root id="src.demo_java.dir" name="ue00_jros2_demo"/>
+                <root id="src.ue_jros2_robotctrl.dir" name="ue01_robotctrl"/>
+                <root id="src.ue_ledctrl.dir" name="ue02_ledctrl"/>
+            </source-roots>
+            <test-roots/>
+        </data>
+    </configuration>
+</project>
