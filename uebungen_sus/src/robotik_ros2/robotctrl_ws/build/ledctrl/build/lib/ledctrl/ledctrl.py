@@ -33,7 +33,7 @@ from rpi_ws281x import ws, Adafruit_NeoPixel, Color
 # ros2 service call /camera_cmd ledctrl_interfaces/srv/CameraCmd "{cmd: 'turn', side: 0, color_on: [255, 0, 0, 0], color_off: [0, 255, 0, 0], duration_on: 0.2, duration_off: 0.2, repetitions: 5}"
 # Lässt die LEDs über der linken Kamera (side = 0) blinken (einmal an, einmal aus) (cmd = 'warn')
 # ros2 service call /camera_cmd ledctrl_interfaces/srv/CameraCmd "{cmd: 'detect', side: 0, color_on: [255, 0, 0, 0], color_off: [0, 255, 0, 0], duration_on: 0.2, duration_off: 0.2, repetitions: 5}"
-# Stellt die Farbe der LED an der Posistion 0 auf rot (255, 0, 0, 0)
+# Stellt die Farbe der LED an der Posistion 0 auf r ot (255, 0, 0, 0)
 # ros2 topic pub -1 /ledctrl std_msgs/msg/UInt8MultiArray "{data: [0, 255, 0, 0, 0]}"
 
 from pathlib import Path

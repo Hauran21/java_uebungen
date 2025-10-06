@@ -4,3 +4,7 @@ ledctrl_interfaces.egg-info/PKG-INFO
 ledctrl_interfaces.egg-info/SOURCES.txt
 ledctrl_interfaces.egg-info/dependency_links.txt
 ledctrl_interfaces.egg-info/top_level.txt
+ledctrl_interfaces/srv/__init__.py
+ledctrl_interfaces/srv/_backlight_value.py
+ledctrl_interfaces/srv/_camera_cmd.py
+ledctrl_interfaces/srv/_color_values.py

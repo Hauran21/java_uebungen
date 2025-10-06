@@ -1,0 +1,16 @@
+{
+  "package_name": "motorctrl_interfaces",
+  "output_dir": "/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/robotctrl_ws/build/motorctrl_interfaces/rosidl_generator_type_description/motorctrl_interfaces",
+  "idl_tuples": [
+    "/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/robotctrl_ws/build/motorctrl_interfaces/rosidl_adapter/motorctrl_interfaces:srv/TurnRobot.idl",
+    "/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/robotctrl_ws/build/motorctrl_interfaces/rosidl_adapter/motorctrl_interfaces:srv/SearchMotors.idl",
+    "/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/robotctrl_ws/build/motorctrl_interfaces/rosidl_adapter/motorctrl_interfaces:srv/GetGUIParameters.idl",
+    "/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/robotctrl_ws/build/motorctrl_interfaces/rosidl_adapter/motorctrl_interfaces:srv/SetGUIParameters.idl",
+    "/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/robotctrl_ws/build/motorctrl_interfaces/rosidl_adapter/motorctrl_interfaces:srv/GetUARTs.idl",
+    "/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/robotctrl_ws/build/motorctrl_interfaces/rosidl_adapter/motorctrl_interfaces:srv/SetMotorConfig.idl"
+  ],
+  "include_paths": [
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces",
+    "service_msgs:/opt/ros/jazzy/share/service_msgs"
+  ]
+}

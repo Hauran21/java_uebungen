@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "rosidl_typesupport_interface/macros.h"
+#include "ledctrl_interfaces/srv/detail/backlight_value__struct.h"
 #include "ledctrl_interfaces/srv/detail/backlight_value__functions.h"
 #include "ledctrl_interfaces/srv/detail/backlight_value__type_support.h"
-#include "ledctrl_interfaces/srv/detail/backlight_value__struct.h"
 
 #ifdef __cplusplus
 extern "C"

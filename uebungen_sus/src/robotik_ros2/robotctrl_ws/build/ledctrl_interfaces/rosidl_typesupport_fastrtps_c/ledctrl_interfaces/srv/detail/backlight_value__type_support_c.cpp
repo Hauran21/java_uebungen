@@ -853,6 +853,16 @@ bool cdr_deserialize_ledctrl_interfaces__srv__BacklightValue_Event(
     uint32_t cdrSize;
     cdr >> cdrSize;
     size_t size = static_cast<size_t>(cdrSize);
+
+    // Check there are at least 'size' remaining bytes in the CDR stream before resizing
+    auto old_state = cdr.get_state();
+    bool correct_size = cdr.jump(size);
+    cdr.set_state(old_state);
+    if (!correct_size) {
+      fprintf(stderr, "sequence size exceeds remaining buffer\n");
+      return false;
+    }
+
     if (ros_message->request.data) {
       ledctrl_interfaces__srv__BacklightValue_Request__Sequence__fini(&ros_message->request);
     }
@@ -871,6 +881,16 @@ bool cdr_deserialize_ledctrl_interfaces__srv__BacklightValue_Event(
     uint32_t cdrSize;
     cdr >> cdrSize;
     size_t size = static_cast<size_t>(cdrSize);
+
+    // Check there are at least 'size' remaining bytes in the CDR stream before resizing
+    auto old_state = cdr.get_state();
+    bool correct_size = cdr.jump(size);
+    cdr.set_state(old_state);
+    if (!correct_size) {
+      fprintf(stderr, "sequence size exceeds remaining buffer\n");
+      return false;
+    }
+
     if (ros_message->response.data) {
       ledctrl_interfaces__srv__BacklightValue_Response__Sequence__fini(&ros_message->response);
     }

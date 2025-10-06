@@ -1,0 +1,242 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-20dbba947748d12b5195.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "cameractrl_interfaces__py",
+					"jsonFile" : "directory-cameractrl_interfaces__py-99f3eb415e2631638210.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/robotctrl_ws/build/cameractrl_interfaces/cameractrl_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "cameractrl_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_cameractrl_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_cameractrl_interfaces_egg-15a7ae3c67e732033c4f.json",
+					"name" : "ament_cmake_python_build_cameractrl_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_cameractrl_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_cameractrl_interfaces-2ddfab618e0cb3e9365c.json",
+					"name" : "ament_cmake_python_copy_cameractrl_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cameractrl_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cameractrl_interfaces-ebb678a00c462d33c38e.json",
+					"name" : "cameractrl_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cameractrl_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cameractrl_interfaces__cpp-1731847a35c8521441c7.json",
+					"name" : "cameractrl_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "cameractrl_interfaces__py::@f0cffda9a38e9397dc91",
+					"jsonFile" : "target-cameractrl_interfaces__py-51c1faa745837ed04361.json",
+					"name" : "cameractrl_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cameractrl_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cameractrl_interfaces__rosidl_generator_c-9cc159abb660cd072b4d.json",
+					"name" : "cameractrl_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cameractrl_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cameractrl_interfaces__rosidl_generator_py-08ef1d9925bf1a672240.json",
+					"name" : "cameractrl_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cameractrl_interfaces__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cameractrl_interfaces__rosidl_generator_type_description-42b34ef102dec51bfd44.json",
+					"name" : "cameractrl_interfaces__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cameractrl_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cameractrl_interfaces__rosidl_typesupport_c-b1f2112630163192fb30.json",
+					"name" : "cameractrl_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cameractrl_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cameractrl_interfaces__rosidl_typesupport_cpp-a8e46fe8f4464d528a67.json",
+					"name" : "cameractrl_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cameractrl_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cameractrl_interfaces__rosidl_typesupport_fastrtps_c-5384f807a7a175b653b1.json",
+					"name" : "cameractrl_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cameractrl_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cameractrl_interfaces__rosidl_typesupport_fastrtps_cpp-64b7c5b874b441b849c5.json",
+					"name" : "cameractrl_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cameractrl_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cameractrl_interfaces__rosidl_typesupport_introspection_c-96aedcb7fd72b4e69c85.json",
+					"name" : "cameractrl_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cameractrl_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cameractrl_interfaces__rosidl_typesupport_introspection_cpp-8be2d95338bddf68f85a.json",
+					"name" : "cameractrl_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cameractrl_interfaces_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cameractrl_interfaces_s__rosidl_typesupport_c-6d8d09ca2bbdd842a5e2.json",
+					"name" : "cameractrl_interfaces_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cameractrl_interfaces_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cameractrl_interfaces_s__rosidl_typesupport_fastrtps_c-9e9783040b0b3e177a82.json",
+					"name" : "cameractrl_interfaces_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cameractrl_interfaces_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cameractrl_interfaces_s__rosidl_typesupport_introspection_c-b3be5f511a14c7ba31fe.json",
+					"name" : "cameractrl_interfaces_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cameractrl_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cameractrl_interfaces_uninstall-fedf3beb7051c0b4f45d.json",
+					"name" : "cameractrl_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-c8951de89e513d1e9e0a.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/robotctrl_ws/build/cameractrl_interfaces",
+		"source" : "/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/robotctrl_ws/src/cameractrl_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

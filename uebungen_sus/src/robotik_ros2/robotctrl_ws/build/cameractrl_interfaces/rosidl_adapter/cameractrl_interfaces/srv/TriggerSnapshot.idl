@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from cameractrl_interfaces/srv/TriggerSnapshot.srv
+// generated code does not contain a copyright notice
+
+
+module cameractrl_interfaces {
+  module srv {
+    struct TriggerSnapshot_Request {
+      @verbatim (language="comment", text=
+        "frame rate in Hz -1 single shot")
+      float fr;
+    };
+    struct TriggerSnapshot_Response {
+      boolean success;
+    };
+  };
+};

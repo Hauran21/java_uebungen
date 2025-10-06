@@ -1,0 +1,3 @@
+float32 fr  # frame rate in Hz -1 single shot
+---
+bool success                 

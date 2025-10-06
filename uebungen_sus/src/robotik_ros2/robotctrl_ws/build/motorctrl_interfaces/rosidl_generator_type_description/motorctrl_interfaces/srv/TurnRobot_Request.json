@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "motorctrl_interfaces/srv/TurnRobot_Request",
+      "fields": [
+        {
+          "name": "angle",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "motorctrl_interfaces/srv/TurnRobot_Request",
+      "hash_string": "RIHS01_12738c7fedcf89005152b6ded7757c75f5e1fba757bf314fee0909bae41c478e"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "motorctrl_interfaces/srv/SearchMotors_Request",
+      "fields": [
+        {
+          "name": "uart_port",
+          "type": {
+            "type_id": 147,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "baudrate",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "motorctrl_interfaces/srv/SearchMotors_Request",
+      "hash_string": "RIHS01_bd1794a9a6b5abd94abbb3a6fa5b703d6c39a9bf5e11e5b04323cea15f8dfde6"
+    }
+  ]
+}

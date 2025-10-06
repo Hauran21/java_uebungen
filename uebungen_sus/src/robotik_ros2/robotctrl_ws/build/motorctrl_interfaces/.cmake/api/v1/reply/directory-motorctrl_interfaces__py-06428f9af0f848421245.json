@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "motorctrl_interfaces__py",
+		"source" : "/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/robotctrl_ws/build/motorctrl_interfaces/motorctrl_interfaces__py"
+	}
+}

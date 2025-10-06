@@ -1,0 +1,3 @@
+[console_scripts]
+dummy = cameractrl.dummy_node:main
+openmv = cameractrl.openmv_node:main

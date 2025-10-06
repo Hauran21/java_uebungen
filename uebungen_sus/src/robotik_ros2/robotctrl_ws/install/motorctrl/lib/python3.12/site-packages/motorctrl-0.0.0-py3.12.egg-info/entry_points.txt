@@ -1,0 +1,7 @@
+[console_scripts]
+diffdrive = motorctrl.diffdrive_node:main_diffdrive
+diffdrive_config = motorctrl.diffdrive_config_node:main_diffdrive_config
+diffdrive_drop = motorctrl.diffdrive_drop_node:main_diffdrive_drop
+drop = motorctrl.drop_node:main_drop
+dummy = motorctrl.dummy_node:main_dummy
+motorconfig = motorctrl.motorconfig_node:main_motorconfig

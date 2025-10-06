@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from motorctrl_interfaces/srv/GetUARTs.srv
+// generated code does not contain a copyright notice
+
+
+module motorctrl_interfaces {
+  module srv {
+    struct GetUARTs_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct GetUARTs_Response {
+      sequence<string> uart_names;
+    };
+  };
+};

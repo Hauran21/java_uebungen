@@ -1,0 +1,6 @@
+{
+  "package_name": "cameractrl_interfaces",
+  "non_idl_tuples": [
+    "/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/robotctrl_ws/src/cameractrl_interfaces:srv/TriggerSnapshot.srv"
+  ]
+}
