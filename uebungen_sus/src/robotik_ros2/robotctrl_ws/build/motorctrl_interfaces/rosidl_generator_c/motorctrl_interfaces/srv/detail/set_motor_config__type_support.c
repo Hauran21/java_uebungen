@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "motorctrl_interfaces/srv/detail/set_motor_config__functions.h"
-#include "motorctrl_interfaces/srv/detail/set_motor_config__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "motorctrl_interfaces/srv/detail/set_motor_config__type_support.h"
+#include "motorctrl_interfaces/srv/detail/set_motor_config__struct.h"
+#include "motorctrl_interfaces/srv/detail/set_motor_config__functions.h"
 
 #ifdef __cplusplus
 extern "C"

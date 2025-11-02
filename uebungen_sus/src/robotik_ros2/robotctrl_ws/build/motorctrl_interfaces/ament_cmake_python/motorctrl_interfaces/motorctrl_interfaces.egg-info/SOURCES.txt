@@ -4,3 +4,10 @@ motorctrl_interfaces.egg-info/PKG-INFO
 motorctrl_interfaces.egg-info/SOURCES.txt
 motorctrl_interfaces.egg-info/dependency_links.txt
 motorctrl_interfaces.egg-info/top_level.txt
+motorctrl_interfaces/srv/__init__.py
+motorctrl_interfaces/srv/_get_gui_parameters.py
+motorctrl_interfaces/srv/_get_uar_ts.py
+motorctrl_interfaces/srv/_search_motors.py
+motorctrl_interfaces/srv/_set_gui_parameters.py
+motorctrl_interfaces/srv/_set_motor_config.py
+motorctrl_interfaces/srv/_turn_robot.py

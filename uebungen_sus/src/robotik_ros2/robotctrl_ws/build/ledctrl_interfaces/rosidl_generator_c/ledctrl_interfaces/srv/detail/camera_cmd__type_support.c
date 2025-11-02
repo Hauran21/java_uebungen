@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
 #include "ledctrl_interfaces/srv/detail/camera_cmd__struct.h"
-#include "ledctrl_interfaces/srv/detail/camera_cmd__type_support.h"
 #include "ledctrl_interfaces/srv/detail/camera_cmd__functions.h"
+#include "ledctrl_interfaces/srv/detail/camera_cmd__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

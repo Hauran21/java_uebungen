@@ -4,8 +4,8 @@
 
 #include <string.h>
 
-#include "motorctrl_interfaces/srv/detail/turn_robot__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "motorctrl_interfaces/srv/detail/turn_robot__type_support.h"
 #include "motorctrl_interfaces/srv/detail/turn_robot__functions.h"
 #include "motorctrl_interfaces/srv/detail/turn_robot__struct.h"
 

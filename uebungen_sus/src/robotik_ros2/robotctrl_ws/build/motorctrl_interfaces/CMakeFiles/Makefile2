@@ -176,7 +176,6 @@ CMakeFiles/motorctrl_interfaces_uninstall.dir/clean:
 # Target rules for target CMakeFiles/motorctrl_interfaces.dir
 
 # All Build rule for target.
-CMakeFiles/motorctrl_interfaces.dir/all: CMakeFiles/motorctrl_interfaces__rosidl_typesupport_introspection_c.dir/all
 CMakeFiles/motorctrl_interfaces.dir/all: CMakeFiles/motorctrl_interfaces__rosidl_typesupport_c.dir/all
 CMakeFiles/motorctrl_interfaces.dir/all: CMakeFiles/motorctrl_interfaces__cpp.dir/all
 CMakeFiles/motorctrl_interfaces.dir/all: CMakeFiles/motorctrl_interfaces__rosidl_typesupport_fastrtps_cpp.dir/all
@@ -185,6 +184,7 @@ CMakeFiles/motorctrl_interfaces.dir/all: CMakeFiles/motorctrl_interfaces__rosidl
 CMakeFiles/motorctrl_interfaces.dir/all: CMakeFiles/motorctrl_interfaces__rosidl_generator_type_description.dir/all
 CMakeFiles/motorctrl_interfaces.dir/all: CMakeFiles/motorctrl_interfaces__rosidl_generator_c.dir/all
 CMakeFiles/motorctrl_interfaces.dir/all: CMakeFiles/motorctrl_interfaces__rosidl_typesupport_fastrtps_c.dir/all
+CMakeFiles/motorctrl_interfaces.dir/all: CMakeFiles/motorctrl_interfaces__rosidl_typesupport_introspection_c.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorctrl_interfaces.dir/build.make CMakeFiles/motorctrl_interfaces.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorctrl_interfaces.dir/build.make CMakeFiles/motorctrl_interfaces.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/robotctrl_ws/build/motorctrl_interfaces/CMakeFiles --progress-num= "Built target motorctrl_interfaces"
@@ -557,11 +557,11 @@ CMakeFiles/motorctrl_interfaces_s__rosidl_typesupport_fastrtps_c.dir/clean:
 # Target rules for target CMakeFiles/motorctrl_interfaces_s__rosidl_typesupport_introspection_c.dir
 
 # All Build rule for target.
-CMakeFiles/motorctrl_interfaces_s__rosidl_typesupport_introspection_c.dir/all: CMakeFiles/motorctrl_interfaces__rosidl_typesupport_introspection_c.dir/all
 CMakeFiles/motorctrl_interfaces_s__rosidl_typesupport_introspection_c.dir/all: CMakeFiles/motorctrl_interfaces__rosidl_typesupport_c.dir/all
 CMakeFiles/motorctrl_interfaces_s__rosidl_typesupport_introspection_c.dir/all: CMakeFiles/motorctrl_interfaces__rosidl_generator_py.dir/all
 CMakeFiles/motorctrl_interfaces_s__rosidl_typesupport_introspection_c.dir/all: motorctrl_interfaces__py/CMakeFiles/motorctrl_interfaces__py.dir/all
 CMakeFiles/motorctrl_interfaces_s__rosidl_typesupport_introspection_c.dir/all: CMakeFiles/motorctrl_interfaces__rosidl_generator_c.dir/all
+CMakeFiles/motorctrl_interfaces_s__rosidl_typesupport_introspection_c.dir/all: CMakeFiles/motorctrl_interfaces__rosidl_typesupport_introspection_c.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorctrl_interfaces_s__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/motorctrl_interfaces_s__rosidl_typesupport_introspection_c.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorctrl_interfaces_s__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/motorctrl_interfaces_s__rosidl_typesupport_introspection_c.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/robotctrl_ws/build/motorctrl_interfaces/CMakeFiles --progress-num=83,84 "Built target motorctrl_interfaces_s__rosidl_typesupport_introspection_c"

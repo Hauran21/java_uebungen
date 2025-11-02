@@ -7,7 +7,6 @@
         </group>
         <group>
             <file>file:/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/ue_ledctrl/ue02/gui/LEDCtrlPanel.java</file>
-            <file>file:/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/ue_ledctrl/ue02/ros/data/LEDCtrlROS.java</file>
             <file>file:/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/ue_ledctrl/ue02/gui/LEDCtrlGUI.java</file>
         </group>
     </open-files>

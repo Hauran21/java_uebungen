@@ -4,8 +4,8 @@
 
 #include <string.h>
 
-#include "motorctrl_interfaces/srv/detail/search_motors__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "motorctrl_interfaces/srv/detail/search_motors__functions.h"
 #include "motorctrl_interfaces/srv/detail/search_motors__type_support.h"
 #include "motorctrl_interfaces/srv/detail/search_motors__struct.h"
 

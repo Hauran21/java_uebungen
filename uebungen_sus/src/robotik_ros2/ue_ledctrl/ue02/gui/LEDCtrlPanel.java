@@ -4,6 +4,20 @@
  */
 package ue02.gui;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
+
 import ue01.data.RobotCtrlROS;
 import ue01.gui.RobotCtrlGUI;
 import ue02.data.LEDConfig;
@@ -28,11 +42,16 @@ public class LEDCtrlPanel extends javax.swing.JPanel {
         this.parent = parent;
         this.rosLEDCtrl = new LEDCtrlROS(nodeRobotCtrl);
         
-        tblLedColor.setModel(tableLEDDataModel); 
-        
-        
-        
         initComponents();
+        
+        btnDelete.setEnabled(false);
+                
+        this.tblLedColor.setModel(tableLEDDataModel); 
+        
+        tblLedColor.getSelectionModel().addListSelectionListener(e -> {
+            boolean selected = tblLedColor.getSelectedRow() != -1;
+            btnDelete.setEnabled(selected);
+        });
     } 
 
     /**
@@ -119,6 +138,7 @@ public class LEDCtrlPanel extends javax.swing.JPanel {
         pColor.add(pTurnService, java.awt.BorderLayout.SOUTH);
 
         pColorTable.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED), "Farbwerte für Publisher"));
+        pColorTable.setAutoscrolls(true);
 
         tblLedColor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -138,16 +158,16 @@ public class LEDCtrlPanel extends javax.swing.JPanel {
         pColorTableLayout.setHorizontalGroup(
             pColorTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pColorTableLayout.createSequentialGroup()
-                .addGap(0, 4, Short.MAX_VALUE)
+                .addGap(0, 7, Short.MAX_VALUE)
                 .addComponent(spColorTable, javax.swing.GroupLayout.PREFERRED_SIZE, 782, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 4, Short.MAX_VALUE))
+                .addGap(0, 7, Short.MAX_VALUE))
         );
         pColorTableLayout.setVerticalGroup(
             pColorTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pColorTableLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(spColorTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pColorTableLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(spColorTable, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pColor.add(pColorTable, java.awt.BorderLayout.CENTER);
@@ -162,18 +182,33 @@ public class LEDCtrlPanel extends javax.swing.JPanel {
         btnLoad.setMaximumSize(new java.awt.Dimension(54, 54));
         btnLoad.setMinimumSize(new java.awt.Dimension(54, 54));
         btnLoad.setPreferredSize(new java.awt.Dimension(54, 54));
+        btnLoad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOnLoad(evt);
+            }
+        });
         pSouth.add(btnLoad);
 
         btnSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ue02/icons/save_48x48.png"))); // NOI18N
         btnSave.setMaximumSize(new java.awt.Dimension(54, 54));
         btnSave.setMinimumSize(new java.awt.Dimension(54, 54));
         btnSave.setPreferredSize(new java.awt.Dimension(54, 54));
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOnSave(evt);
+            }
+        });
         pSouth.add(btnSave);
 
         btnAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ue02/icons/plus_48x48.png"))); // NOI18N
         btnAdd.setMaximumSize(new java.awt.Dimension(54, 54));
         btnAdd.setMinimumSize(new java.awt.Dimension(54, 54));
         btnAdd.setPreferredSize(new java.awt.Dimension(54, 54));
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onAdd(evt);
+            }
+        });
         pSouth.add(btnAdd);
 
         btnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ue02/icons/bin_48x48.png"))); // NOI18N
@@ -249,10 +284,72 @@ public class LEDCtrlPanel extends javax.swing.JPanel {
         
         try {
             leds.readFrom(led_config);
-        } catch (Exception e) {
-            ;//todo
+        } catch (Exception ex) {
+            Logger.getLogger(LEDCtrlPanel.class.getName()).log(Level.SEVERE, null, ex);
         }
+        tableLEDDataModel.fireTableDataChanged(); //Table aktualisieren
     }//GEN-LAST:event_onReadColors
+
+    private void btnOnLoad(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOnLoad
+        final JFileChooser chooser = new JFileChooser();
+        chooser.addChoosableFileFilter(
+            new FileNameExtensionFilter("LED-Config-Datein","csv","txt"));
+        chooser.setAcceptAllFileFilterUsed(false);
+        
+        if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
+            final File file = chooser.getSelectedFile();
+            
+            try (
+                final BufferedReader reader =
+                  new BufferedReader(
+                  new InputStreamReader(
+                  new FileInputStream(file), "utf8"));
+            )
+            {
+                leds.readFrom(reader);
+                tableLEDDataModel.fireTableDataChanged();
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                JOptionPane.showMessageDialog(this, ex.getMessage(), "Fehler aufgetreten. Laden der Datei fehlgeschlagen", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_btnOnLoad
+
+    private void btnOnSave(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOnSave
+        final JFileChooser chooser = new JFileChooser();
+        
+        if (chooser.showSaveDialog(this) == JFileChooser.APPROVE_OPTION) {
+            File file = chooser.getSelectedFile();
+            final String path = file.getAbsolutePath();
+            
+            if(! path.toLowerCase().endsWith(".csv")) {
+                file = new File(path+".csv");
+            }
+            
+            try (
+                final BufferedWriter writer = new BufferedWriter(
+                    new OutputStreamWriter(
+                    new FileOutputStream(file), "utf8"))        
+            )
+            {
+                leds.writeTo(writer);
+                JOptionPane.showMessageDialog(this, 
+                        String.format("%d LEDs erfolgreich gespeichert!", 
+                                leds.size()), "Erfolgreich gespeichert", 
+                                JOptionPane.ERROR_MESSAGE);
+            } 
+            catch (Exception ex) {
+                ex.printStackTrace();
+                JOptionPane.showMessageDialog(this, 
+                        ex.getMessage(), "Fehler aufgetreten.", 
+                        JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_btnOnSave
+
+    private void onAdd(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onAdd
+        // TODO add your handling code here:
+    }//GEN-LAST:event_onAdd
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

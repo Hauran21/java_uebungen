@@ -4,7 +4,6 @@
  */
 package ue01.data;
 
-import ue02.data.*;
 import java.net.*;
 import java.util.*;
 
@@ -16,26 +15,10 @@ import id.jros2client.JRos2Client;
 import id.jros2client.JRos2ClientFactory;
 
 //ROS2 Publisher
-import id.jrosclient.TopicSubmissionPublisher;
-import id.jrosmessages.std_msgs.UInt8MultiArrayMessage;
-import java.util.concurrent.ExecutionException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-//ROS2 Service
-import pinorobotics.jros2services.JRos2ServicesFactory;
-import pinorobotics.jros2services.JRos2ServiceClient;
 import pinorobotics.rtpstalk.RtpsTalkConfiguration;
 
 //Interface Definitions for TurnSignal Service
 
-import ue01.srv.BacklightValueRequestMessage;
-import ue01.srv.CameraCmdResponseMessage;
-import ue01.srv.CameraCmdServiceDefinition;
-
-import ue01.srv.ColorValuesRequestMessage;
-import ue01.srv.ColorValuesResponseMessage;
-import ue01.srv.ColorValuesServiceDefinition;
 
 /**
  *
@@ -48,7 +31,6 @@ public class RobotCtrlROS
     
     private final JRos2Client rosClient;
     
-
     public RobotCtrlROS()
     {        
         //String iface = System.getenv().getOrDefault("ROS2_NETWORK_INTERFACE", "ens33");
@@ -69,20 +51,19 @@ public class RobotCtrlROS
                 new RtpsTalkConfiguration.Builder()
                         .networkInterface(iface).build());
         
+        rosClient = new JRos2ClientFactory().createClient(configBuilder.build());
     }
-    
-    
-    
-    private byte[] toByteArray(List<Byte> list)
+     
+    public void shutdown()
     {
-        byte[] result = new byte[list.size()];
-        for (int i = 0; i < list.size(); i++)
+        try
         {
-            result[i] = list.get(i);
+            rosClient.close();  // Beendet den ROS2-Client ordentlich
+        } catch (Exception e)
+        {
+            System.err.println("Fehler beim Schließen des ROS2-Clients: " + e.getMessage());
         }
-        return result;
     }
-    
     
     public static String getFirstNonLoopbackInterface() throws SocketException
     {
@@ -95,4 +76,10 @@ public class RobotCtrlROS
         return "lo"; // Fallback
     }
 
+    public JRos2Client getRosClient()
+    {
+        return rosClient;
+    }
+
+    
 }

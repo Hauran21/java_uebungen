@@ -4,8 +4,8 @@
 
 #include <string.h>
 
-#include "motorctrl_interfaces/srv/detail/get_uar_ts__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "motorctrl_interfaces/srv/detail/get_uar_ts__struct.h"
 #include "motorctrl_interfaces/srv/detail/get_uar_ts__functions.h"
 #include "motorctrl_interfaces/srv/detail/get_uar_ts__type_support.h"
 

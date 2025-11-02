@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
-#include "cameractrl_interfaces/srv/detail/trigger_snapshot__struct.h"
-#include "cameractrl_interfaces/srv/detail/trigger_snapshot__type_support.h"
 #include "cameractrl_interfaces/srv/detail/trigger_snapshot__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "cameractrl_interfaces/srv/detail/trigger_snapshot__type_support.h"
+#include "cameractrl_interfaces/srv/detail/trigger_snapshot__struct.h"
 
 #ifdef __cplusplus
 extern "C"

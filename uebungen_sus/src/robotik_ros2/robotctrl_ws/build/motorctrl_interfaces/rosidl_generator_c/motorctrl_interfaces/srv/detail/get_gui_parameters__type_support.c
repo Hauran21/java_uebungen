@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "motorctrl_interfaces/srv/detail/get_gui_parameters__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
-#include "motorctrl_interfaces/srv/detail/get_gui_parameters__functions.h"
 #include "motorctrl_interfaces/srv/detail/get_gui_parameters__type_support.h"
+#include "motorctrl_interfaces/srv/detail/get_gui_parameters__functions.h"
+#include "motorctrl_interfaces/srv/detail/get_gui_parameters__struct.h"
 
 #ifdef __cplusplus
 extern "C"

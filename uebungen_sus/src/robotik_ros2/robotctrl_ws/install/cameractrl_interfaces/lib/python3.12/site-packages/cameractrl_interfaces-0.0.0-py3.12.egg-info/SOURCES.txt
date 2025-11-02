@@ -4,3 +4,5 @@ cameractrl_interfaces.egg-info/PKG-INFO
 cameractrl_interfaces.egg-info/SOURCES.txt
 cameractrl_interfaces.egg-info/dependency_links.txt
 cameractrl_interfaces.egg-info/top_level.txt
+cameractrl_interfaces/srv/__init__.py
+cameractrl_interfaces/srv/_trigger_snapshot.py
