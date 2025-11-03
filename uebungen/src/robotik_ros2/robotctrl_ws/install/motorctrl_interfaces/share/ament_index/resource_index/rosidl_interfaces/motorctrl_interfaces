@@ -1,0 +1,12 @@
+srv/GetGUIParameters.idl
+srv/GetGUIParameters.srv
+srv/GetUARTs.idl
+srv/GetUARTs.srv
+srv/SearchMotors.idl
+srv/SearchMotors.srv
+srv/SetGUIParameters.idl
+srv/SetGUIParameters.srv
+srv/SetMotorConfig.idl
+srv/SetMotorConfig.srv
+srv/TurnRobot.idl
+srv/TurnRobot.srv

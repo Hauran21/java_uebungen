@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from motorctrl_interfaces/srv/TurnRobot.srv
+// generated code does not contain a copyright notice
+
+
+module motorctrl_interfaces {
+  module srv {
+    struct TurnRobot_Request {
+      @verbatim (language="comment", text=
+        "angle in radians")
+      float angle;
+    };
+    struct TurnRobot_Response {
+      boolean status;
+    };
+  };
+};

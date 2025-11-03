@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "cameractrl_interfaces__py",
+		"source" : "/home/robot/work/java_uebungen/uebungen/src/robotik_ros2/robotctrl_ws/build/cameractrl_interfaces/cameractrl_interfaces__py"
+	}
+}

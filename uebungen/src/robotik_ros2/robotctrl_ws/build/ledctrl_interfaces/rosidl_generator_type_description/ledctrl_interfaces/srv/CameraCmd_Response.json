@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "ledctrl_interfaces/srv/CameraCmd_Response",
+      "fields": [
+        {
+          "name": "status",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "ledctrl_interfaces/srv/CameraCmd_Response",
+      "hash_string": "RIHS01_c12382be5c8a24987b4a3e9fa0d06bb68eeb7b56dde295abbda634b65fd1cdb8"
+    }
+  ]
+}

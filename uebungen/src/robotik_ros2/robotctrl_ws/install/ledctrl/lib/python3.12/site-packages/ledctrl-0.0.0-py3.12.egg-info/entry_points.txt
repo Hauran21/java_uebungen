@@ -1,0 +1,2 @@
+[console_scripts]
+ledctrl = ledctrl.ledctrl:main

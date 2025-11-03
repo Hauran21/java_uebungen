@@ -1,0 +1,11 @@
+{
+  "package_name": "motorctrl_interfaces",
+  "non_idl_tuples": [
+    "/home/robot/work/java_uebungen/uebungen/src/robotik_ros2/robotctrl_ws/src/motorctrl_interfaces:srv/TurnRobot.srv",
+    "/home/robot/work/java_uebungen/uebungen/src/robotik_ros2/robotctrl_ws/src/motorctrl_interfaces:srv/SearchMotors.srv",
+    "/home/robot/work/java_uebungen/uebungen/src/robotik_ros2/robotctrl_ws/src/motorctrl_interfaces:srv/GetGUIParameters.srv",
+    "/home/robot/work/java_uebungen/uebungen/src/robotik_ros2/robotctrl_ws/src/motorctrl_interfaces:srv/SetGUIParameters.srv",
+    "/home/robot/work/java_uebungen/uebungen/src/robotik_ros2/robotctrl_ws/src/motorctrl_interfaces:srv/GetUARTs.srv",
+    "/home/robot/work/java_uebungen/uebungen/src/robotik_ros2/robotctrl_ws/src/motorctrl_interfaces:srv/SetMotorConfig.srv"
+  ]
+}

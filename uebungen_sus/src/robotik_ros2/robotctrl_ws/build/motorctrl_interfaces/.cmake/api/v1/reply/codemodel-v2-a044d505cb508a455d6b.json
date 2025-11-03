@@ -1,0 +1,242 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-7017c943840102198295.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "motorctrl_interfaces__py",
+					"jsonFile" : "directory-motorctrl_interfaces__py-06428f9af0f848421245.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/robotctrl_ws/build/motorctrl_interfaces/motorctrl_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "motorctrl_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_motorctrl_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_motorctrl_interfaces_egg-4a8f0fc20dae3519d11a.json",
+					"name" : "ament_cmake_python_build_motorctrl_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_motorctrl_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_motorctrl_interfaces-dbe047fe19482b037f27.json",
+					"name" : "ament_cmake_python_copy_motorctrl_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "motorctrl_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-motorctrl_interfaces-c7c7edc6caebd6afaca2.json",
+					"name" : "motorctrl_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "motorctrl_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-motorctrl_interfaces__cpp-d0484d56c741a18174fd.json",
+					"name" : "motorctrl_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "motorctrl_interfaces__py::@a5e28595d7a39c155063",
+					"jsonFile" : "target-motorctrl_interfaces__py-9f8bc1b2a96cfebd7999.json",
+					"name" : "motorctrl_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "motorctrl_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-motorctrl_interfaces__rosidl_generator_c-35fc4501697587444793.json",
+					"name" : "motorctrl_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "motorctrl_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-motorctrl_interfaces__rosidl_generator_py-6e1713d140499df8d067.json",
+					"name" : "motorctrl_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "motorctrl_interfaces__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-motorctrl_interfaces__rosidl_generator_type_description-9a093d7abb1b8aad9e30.json",
+					"name" : "motorctrl_interfaces__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "motorctrl_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-motorctrl_interfaces__rosidl_typesupport_c-27a9ca5a1a61bdc6dc58.json",
+					"name" : "motorctrl_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "motorctrl_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-motorctrl_interfaces__rosidl_typesupport_cpp-2a7f6d12ef0e3e6e1057.json",
+					"name" : "motorctrl_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "motorctrl_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-motorctrl_interfaces__rosidl_typesupport_fastrtps_c-bcc5f84cbae85549d19d.json",
+					"name" : "motorctrl_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "motorctrl_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-motorctrl_interfaces__rosidl_typesupport_fastrtps_cpp-b9ab6702666cb5360829.json",
+					"name" : "motorctrl_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "motorctrl_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-motorctrl_interfaces__rosidl_typesupport_introspection_c-d3b61bab8834adb265df.json",
+					"name" : "motorctrl_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "motorctrl_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-motorctrl_interfaces__rosidl_typesupport_introspection_cpp-842ddf5f23173a3a1a6f.json",
+					"name" : "motorctrl_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "motorctrl_interfaces_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-motorctrl_interfaces_s__rosidl_typesupport_c-0d8bc76a33c57e2ed83a.json",
+					"name" : "motorctrl_interfaces_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "motorctrl_interfaces_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-motorctrl_interfaces_s__rosidl_typesupport_fastrtps_c-8fc203fef4f71b6ad120.json",
+					"name" : "motorctrl_interfaces_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "motorctrl_interfaces_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-motorctrl_interfaces_s__rosidl_typesupport_introspection_c-080cf8d4d68c8794dde4.json",
+					"name" : "motorctrl_interfaces_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "motorctrl_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-motorctrl_interfaces_uninstall-cb8a1d43dfebded73599.json",
+					"name" : "motorctrl_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-ee5f49233d75682adfd3.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/robotctrl_ws/build/motorctrl_interfaces",
+		"source" : "/home/robot/work/java_uebungen/uebungen_sus/src/robotik_ros2/robotctrl_ws/src/motorctrl_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

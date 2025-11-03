@@ -1,0 +1,33 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/motorctrl_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/get_gui_parameters__type_support_c.cpp.o"
+  "CMakeFiles/motorctrl_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/get_gui_parameters__type_support_c.cpp.o.d"
+  "CMakeFiles/motorctrl_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/get_uar_ts__type_support_c.cpp.o"
+  "CMakeFiles/motorctrl_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/get_uar_ts__type_support_c.cpp.o.d"
+  "CMakeFiles/motorctrl_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/search_motors__type_support_c.cpp.o"
+  "CMakeFiles/motorctrl_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/search_motors__type_support_c.cpp.o.d"
+  "CMakeFiles/motorctrl_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/set_gui_parameters__type_support_c.cpp.o"
+  "CMakeFiles/motorctrl_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/set_gui_parameters__type_support_c.cpp.o.d"
+  "CMakeFiles/motorctrl_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/set_motor_config__type_support_c.cpp.o"
+  "CMakeFiles/motorctrl_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/set_motor_config__type_support_c.cpp.o.d"
+  "CMakeFiles/motorctrl_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/turn_robot__type_support_c.cpp.o"
+  "CMakeFiles/motorctrl_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/turn_robot__type_support_c.cpp.o.d"
+  "libmotorctrl_interfaces__rosidl_typesupport_fastrtps_c.pdb"
+  "libmotorctrl_interfaces__rosidl_typesupport_fastrtps_c.so"
+  "rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/get_gui_parameters__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/get_gui_parameters__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/get_uar_ts__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/get_uar_ts__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/search_motors__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/search_motors__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/set_gui_parameters__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/set_gui_parameters__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/set_motor_config__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/set_motor_config__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/turn_robot__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/motorctrl_interfaces/srv/detail/turn_robot__type_support_c.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/motorctrl_interfaces__rosidl_typesupport_fastrtps_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
