@@ -139,6 +139,7 @@ public class LEDCtrlPanel extends javax.swing.JPanel {
 
         pColorTable.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED), "Farbwerte für Publisher"));
         pColorTable.setAutoscrolls(true);
+        pColorTable.setLayout(new java.awt.BorderLayout());
 
         tblLedColor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -153,22 +154,7 @@ public class LEDCtrlPanel extends javax.swing.JPanel {
         ));
         spColorTable.setViewportView(tblLedColor);
 
-        javax.swing.GroupLayout pColorTableLayout = new javax.swing.GroupLayout(pColorTable);
-        pColorTable.setLayout(pColorTableLayout);
-        pColorTableLayout.setHorizontalGroup(
-            pColorTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pColorTableLayout.createSequentialGroup()
-                .addGap(0, 7, Short.MAX_VALUE)
-                .addComponent(spColorTable, javax.swing.GroupLayout.PREFERRED_SIZE, 782, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 7, Short.MAX_VALUE))
-        );
-        pColorTableLayout.setVerticalGroup(
-            pColorTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pColorTableLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(spColorTable, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        pColorTable.add(spColorTable, java.awt.BorderLayout.CENTER);
 
         pColor.add(pColorTable, java.awt.BorderLayout.CENTER);
 
