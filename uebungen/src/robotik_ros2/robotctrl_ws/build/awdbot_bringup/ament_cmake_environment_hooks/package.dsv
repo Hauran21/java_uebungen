@@ -1,4 +1,0 @@
-source;share/awdbot_bringup/local_setup.bash
-source;share/awdbot_bringup/local_setup.dsv
-source;share/awdbot_bringup/local_setup.sh
-source;share/awdbot_bringup/local_setup.zsh

@@ -1,6 +1,0 @@
-srv/BacklightValue.idl
-srv/BacklightValue.srv
-srv/CameraCmd.idl
-srv/CameraCmd.srv
-srv/ColorValues.idl
-srv/ColorValues.srv

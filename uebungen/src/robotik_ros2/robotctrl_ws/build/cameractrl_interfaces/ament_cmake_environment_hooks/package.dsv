@@ -1,4 +1,0 @@
-source;share/cameractrl_interfaces/local_setup.bash
-source;share/cameractrl_interfaces/local_setup.dsv
-source;share/cameractrl_interfaces/local_setup.sh
-source;share/cameractrl_interfaces/local_setup.zsh

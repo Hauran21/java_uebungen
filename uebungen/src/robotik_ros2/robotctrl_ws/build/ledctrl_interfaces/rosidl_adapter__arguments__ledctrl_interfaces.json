@@ -1,8 +1,0 @@
-{
-  "package_name": "ledctrl_interfaces",
-  "non_idl_tuples": [
-    "/home/robot/work/java_uebungen/uebungen/src/robotik_ros2/robotctrl_ws/src/ledctrl_interfaces:srv/CameraCmd.srv",
-    "/home/robot/work/java_uebungen/uebungen/src/robotik_ros2/robotctrl_ws/src/ledctrl_interfaces:srv/BacklightValue.srv",
-    "/home/robot/work/java_uebungen/uebungen/src/robotik_ros2/robotctrl_ws/src/ledctrl_interfaces:srv/ColorValues.srv"
-  ]
-}
