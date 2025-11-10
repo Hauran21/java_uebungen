@@ -21,6 +21,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import ue01.data.RobotCtrlROS;
 import ue01.gui.RobotCtrlGUI;
 import ue02.data.LEDConfig;
+import ue02.data.LEDData;
 import ue02.ros.data.LEDCtrlROS;
 
 /**
@@ -152,6 +153,11 @@ public class LEDCtrlPanel extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tblLedColor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                onMouseClicked(evt);
+            }
+        });
         spColorTable.setViewportView(tblLedColor);
 
         pColorTable.add(spColorTable, java.awt.BorderLayout.CENTER);
@@ -201,6 +207,11 @@ public class LEDCtrlPanel extends javax.swing.JPanel {
         btnDelete.setMaximumSize(new java.awt.Dimension(54, 54));
         btnDelete.setMinimumSize(new java.awt.Dimension(54, 54));
         btnDelete.setPreferredSize(new java.awt.Dimension(54, 54));
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onDelete(evt);
+            }
+        });
         pSouth.add(btnDelete);
 
         btnPublish.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ue02/icons/write-bot_48x48.png"))); // NOI18N
@@ -334,8 +345,40 @@ public class LEDCtrlPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnOnSave
 
     private void onAdd(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onAdd
-        // TODO add your handling code here:
+        final LEDDataDialog dlg = new LEDDataDialog(this.parent, true);
+        dlg.setVisible(true);
+        
+        if(dlg.pressedOK()) {
+            final LEDData led = dlg.getLedData();
+            leds.add(led);
+            tableLEDDataModel.fireTableDataChanged();
+        }
     }//GEN-LAST:event_onAdd
+
+    private void onMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_onMouseClicked
+        if(evt.getClickCount() == 2) {
+            if(tblLedColor.getSelectedRow() >= 0) {
+                final LEDDataDialog dlg = new LEDDataDialog(this.parent, true);
+                LEDData led = leds.get(tblLedColor.getSelectedRow());
+                dlg.setLedData(led);
+                dlg.setVisible(true);
+                
+                if(dlg.pressedOK()) {
+                    led = dlg.getLedData();
+                    leds.set(tblLedColor.getSelectedRow() , led);
+                    tableLEDDataModel.fireTableDataChanged();
+                }
+            }
+        }
+    }//GEN-LAST:event_onMouseClicked
+
+    private void onDelete(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onDelete
+        if(tblLedColor.getSelectedRow() >= 0) {
+            int rowindex = tblLedColor.getSelectedRow();
+            leds.remove(tblLedColor.getSelectedRow());
+            tableLEDDataModel.fireTableRowsDeleted(rowindex,rowindex);
+        }
+    }//GEN-LAST:event_onDelete
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
