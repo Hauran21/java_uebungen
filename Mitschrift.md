@@ -140,26 +140,45 @@ JApp ... Java Applikation
 BW ... BufferedWriter
 FW ... FileWriter
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-> ==scheucher==
+# Schnittstellentechnik / Bussysteme
+- Schnittstelle
+  - seriell
+    - bit seriell
+    - byte seriell
+  - parallel
+    - bit parallel
+    - byte seriell
+  
+- Serielle Schnittstellen
+  - synchron
+    - mindestens 3 Leitungen
+      - Data
+      - Clock -> Rechteckssignal
+      - GND
+  - asynchron
+    - 2 Leitungen
+      - Data
+      - GND
+    - Microcontroller: UART
+    - RS232 ("Die serielle Schnittstelle)
+      - 3 Kabel
+        - RX, TX, GND (RX-TX , TX-RX)
+      - bidirektional
+      - P2P -> Point to Point
+      - max. Länge: 10m; Sinnvoll 2-3m
+    - RS422
+      - 4 Kabel
+        - Tx+, Tx- Rx+, Rx-
+        - Master: Tx+ auf Tx+ ; Tx- auf Tx-; Rx+ auf Rx+ ; Rx- auf Rx- 
+        - Slave:  Tx+ auf Rx+ ; Tx- auf Rx-; Rx+ auf Tx+ ; Rx- auf Tx-
+      - haben Bussadressen
+      - Protokoll -> Master/Slave -> Modbus 
+      - P2MP -> Point to Multipoint
+      - max Länge: 1200m
+    - RS485
+      - 2 Leitungen
+        - Data+, Data-
+        - alle Data+ zusammen und alle Data- zusammen
+      - haben Bussadressen
+      - Protokoll: Master/Slave, Token/Ring
+      - Bsp. Profibus
