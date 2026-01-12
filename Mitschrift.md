@@ -175,10 +175,30 @@ FW ... FileWriter
       - Protokoll -> Master/Slave -> Modbus 
       - P2MP -> Point to Multipoint
       - max Länge: 1200m
+      - Nachteil: einer hat immer das "Rederecht" -> man kann nur Master-Slave Protokoll verwenden
     - RS485
       - 2 Leitungen
         - Data+, Data-
         - alle Data+ zusammen und alle Data- zusammen
       - haben Bussadressen
-      - Protokoll: Master/Slave, Token/Ring
+      - Protokoll: Master/Slave, Token/Ring, Collision
       - Bsp. Profibus
+  
+# Serielle Schnittstellen - Software
+- Mikrocontroller
+  - Register
+  - C
+- PC
+  - OS
+    - Windows
+    - Linux
+    - Betriebssyste-Funktionsaufrufe
+    - z.B. `#include <windows.h>`
+  - C
+  - Java
+    - JNI (Java Native Interface -> C funktionen aufrufen)
+    - JNA (Java Nativd Access)
+    - FFI (Foreign Function Interface)
+    - um die Betriebssystemaufrufe auf jedem Os verwenden zu können
+      - j Serial Comm
+![JavaAufbau](images/JavaAufbau.png "Java Aufbau")

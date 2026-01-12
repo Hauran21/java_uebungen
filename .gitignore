@@ -28,3 +28,5 @@ hs_err_pid*
 replay_pid*
 /4_Klasse/uebungen_sus/prj/uebungen-ros2/nbproject/private/
 /uebungen_sus/prj/uebungen-ros2/build/
+
+.vscode/*
