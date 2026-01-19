@@ -50,6 +50,7 @@
         - *.mp3, *.mp4
 
 ## Textformate
+
 - csv
 - ini
 - json
@@ -57,7 +58,8 @@
 
 Beispieldateien:
 
-`leds.csv` 
+`leds.csv`
+
 ```csv
 Name1;255;0;0;128;10
 Name2;0;255;0;128;10
@@ -65,6 +67,7 @@ Name3;0;0;255;128;10
 ```
 
 `leds.ini`
+
 ```ini
 [config]
 anzahl=3
@@ -82,6 +85,7 @@ address=10
 ```
 
 `leds.json`
+
 ```json
 [
     {
@@ -141,6 +145,7 @@ BW ... BufferedWriter
 FW ... FileWriter
 
 # Schnittstellentechnik / Bussysteme
+
 - Schnittstelle
   - seriell
     - bit seriell
@@ -185,6 +190,7 @@ FW ... FileWriter
       - Bsp. Profibus
   
 # Serielle Schnittstellen - Software
+
 - Mikrocontroller
   - Register
   - C
@@ -197,8 +203,29 @@ FW ... FileWriter
   - C
   - Java
     - JNI (Java Native Interface -> C funktionen aufrufen)
-    - JNA (Java Nativd Access)
+    - JNA (Java Native Access)
     - FFI (Foreign Function Interface)
     - um die Betriebssystemaufrufe auf jedem Os verwenden zu können
       - j Serial Comm
 ![JavaAufbau](images/JavaAufbau.png "Java Aufbau")
+
+In der Java Virtual Machine gibt es keine SerialPorts sonder nur NetzwerkPorts
+
+> Harnisch:"I war in da Schule krank wie wir mulitplizieren gelernt haben"
+> Hadler:"Pech g´abt
+
+# Bussysteme am Beispiel Modbus
+
+[Modbus Protokoll Spezifikation](doc/modbusprotocolspecification.pdf)
+
+- Modbus
+  - Master-Slave Protokoll
+  - sehr einfach
+  - sehr verbreitet
+  - Modbus RTU vs Modbus IP
+    - Modbus RTU
+      - serialle Schnittstelle
+    - Modbus IP
+      - über ein Netzwerk
+  - "Dezentrale Peripherie" oder "Intelligente Klemme"
+  - 

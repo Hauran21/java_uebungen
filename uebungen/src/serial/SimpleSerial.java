@@ -1,6 +1,8 @@
 package serial;
 
 import com.fazecast.jSerialComm.SerialPort;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,21 +10,51 @@ import java.util.List;
  *
  * @author robot
  */
-public class SimpleSerial {
+public class SimpleSerial implements AutoCloseable {
     private final String portName;
     private final SerialPort serialPort;
+    private OutputStream outputStream;
+    private InputStream inputStream;
     
     public SimpleSerial(String portName) {
         this.portName = portName;
         serialPort = SerialPort.getCommPort(portName);
     }
     
-    public void open() {
-        // TODO
+    public void open() throws Exception {
+        if (!serialPort.openPort())
+            throw new Exception("error on opening port" + portName);
+        
+        outputStream = serialPort.getOutputStream();
+        inputStream = serialPort.getInputStream();
     }
     
-    public void close() {
-        // TODO
+    // Wird automatisch aufgerufen durch das implementieren von AutoClosable
+    @Override
+    public void close() throws Exception {
+        inputStream = null;
+        outputStream = null;
+        
+        if(!serialPort.closePort())
+            throw new Exception("error on closing port" + portName);
+    } 
+    
+    public final boolean setComPortParameters(
+            int newBaudRate, int newDataBits, int newStopBits, int newParity
+    )
+    {
+        return serialPort.setComPortParameters(
+                newBaudRate, newDataBits, newStopBits, newParity);
+    }
+    
+    public final boolean setComPortTimeouts(int ms) {
+        return serialPort.setComPortTimeouts(
+            SerialPort.TIMEOUT_READ_BLOCKING, ms, 0);
+    }
+    
+    public void purge() throws Exception {
+        while (inputStream.available() > 0)
+            inputStream.read(); 
     }
     
     public static List<String> findSerialPortNames() {
@@ -44,5 +76,13 @@ public class SimpleSerial {
         
         for (String portName : portNames)
             System.out.println(portNames);
+    }
+
+    public OutputStream getOutputStream() {
+        return outputStream;
+    }
+
+    public InputStream getInputStream() {
+        return inputStream;
     }
 }
