@@ -30,3 +30,4 @@ replay_pid*
 /uebungen_sus/prj/uebungen-ros2/build/
 
 .vscode/*
+/uebungen/prj/dist/

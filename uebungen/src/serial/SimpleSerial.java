@@ -19,14 +19,14 @@ public class SimpleSerial implements AutoCloseable {
     public SimpleSerial(String portName) {
         this.portName = portName;
         serialPort = SerialPort.getCommPort(portName);
+        outputStream = serialPort.getOutputStream();
+        inputStream = serialPort.getInputStream();
     }
     
     public void open() throws Exception {
         if (!serialPort.openPort())
-            throw new Exception("error on opening port" + portName);
-        
-        outputStream = serialPort.getOutputStream();
-        inputStream = serialPort.getInputStream();
+            throw new Exception("error on opening port " + portName);
+        // sudo usermod -aG dialout <Benutzername>   
     }
     
     // Wird automatisch aufgerufen durch das implementieren von AutoClosable

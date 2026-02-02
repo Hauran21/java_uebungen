@@ -53,11 +53,11 @@ public class AbstractModbusTelegram implements Telegram {
         return crc;
     }
     
-    private byte getLoByte(final int data) {
+    protected static byte getLoByte(final int data) {
         return (byte)(data & 0x00FF);
     }
     
-    private byte getHiByte(final int data) {
+    protected static byte getHiByte(final int data) {
         // 8 bits nach rechts schrieben
         return getLoByte(data >> 8);
     }
@@ -80,6 +80,8 @@ public class AbstractModbusTelegram implements Telegram {
         final OutputStream os = serial.getOutputStream();
         os.write(toWrite);
         os.flush(); //Warten bis nix mehr gebuffert ist
+        
+        log("XMT", toWrite);
     }
 
     @Override
@@ -113,6 +115,15 @@ public class AbstractModbusTelegram implements Telegram {
         
         System.arraycopy(buffer, 2, rcvData, 0, rcvData.length);
         
+        log("RCV", buffer);
+        
         return rcvData;
+    }
+    
+    private void log(String what, byte[] data) {
+        System.out.print(what+":");
+        for(byte b : data)
+            System.out.format(" %02X", b);
+        System.out.println("");
     }
 }
