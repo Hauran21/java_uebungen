@@ -126,4 +126,8 @@ public class AbstractModbusTelegram implements Telegram {
             System.out.format(" %02X", b);
         System.out.println("");
     }
+
+    protected byte[] getRcvData() {
+        return rcvData;
+    }
 }
