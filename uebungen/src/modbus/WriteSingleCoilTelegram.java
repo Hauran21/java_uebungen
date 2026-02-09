@@ -37,41 +37,36 @@ public class WriteSingleCoilTelegram extends AbstractModbusTelegram {
             }
             System.out.format("%d Schnittstellen gefunden!%n", portNames.size());
 
-            try (final SimpleSerial serial = new SimpleSerial("ttyUSB0")) {
+            try (final SimpleSerial serial = new SimpleSerial("ttyUSB0"))
+            {
                 serial.open();
-                serial.setComPortParameters(
-                        57600, 8, SerialPort.TWO_STOP_BITS, SerialPort.NO_PARITY);
+                serial.setComPortParameters(57600, 8, SerialPort.TWO_STOP_BITS, SerialPort.NO_PARITY);
                 serial.setComPortTimeouts(5_000);
-
-                int lastLedIndex = 0,
-                        ledIndex = 0;
+                
+                int lastLedIndex = 0, ledIndex = 0;
                 boolean up = true;
-
-                for (int i = 0; i < 1_000; i++) {
-                    //Ausschalten
-                    final WriteSingleCoilTelegram tel
-                            = new WriteSingleCoilTelegram(serial, 2, 0, false);
+               
+                
+                for (int i = 0; i<1_000;i++)
+                {
+                    final WriteSingleCoilTelegram tel = 
+                        new WriteSingleCoilTelegram(serial, 2, lastLedIndex, false);
                     tel.send();
                     tel.receive();
-
-                    //Einschalten
-                    final WriteSingleCoilTelegram tel2
-                            = new WriteSingleCoilTelegram(serial, 2, 0, true);
+                    
+                    final WriteSingleCoilTelegram tel2 =
+                            new WriteSingleCoilTelegram(serial, 2, ledIndex, true);
                     tel2.send();
                     tel2.receive();
-
                     lastLedIndex = ledIndex;
-
-                    if (up) {
-                        if (++ledIndex >= 4) {
-                            ledIndex = 2;
-                            up = false;
-                        }
-                    } else {
-                        if (--ledIndex < 0) {
-                            ledIndex = 1;
-                            up = true;
-                        }
+                    
+                    if(up)
+                    {
+                        if(++ledIndex >= 4) {ledIndex=2; up=false;}
+                    }
+                    else
+                    {
+                        if (--ledIndex<0) { ledIndex=1; up=true;}
                     }
                     Thread.sleep(100);
                 }
