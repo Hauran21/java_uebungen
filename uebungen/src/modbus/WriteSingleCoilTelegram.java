@@ -4,10 +4,6 @@ import com.fazecast.jSerialComm.SerialPort;
 import java.util.List;
 import serial.SimpleSerial;
 
-/**
- *
- * @author robot
- */
 public class WriteSingleCoilTelegram extends AbstractModbusTelegram {
 
     public WriteSingleCoilTelegram(
@@ -16,7 +12,7 @@ public class WriteSingleCoilTelegram extends AbstractModbusTelegram {
             int coilAdr,
             boolean value
     ) {
-        super(serial, devAdr, 5, calcXmtData(coilAdr, value), 8);
+    super(serial, devAdr, 5, calcXmtData(coilAdr, value), 8);
     }
 
     private static byte[] calcXmtData(int coilAdr, boolean value) {

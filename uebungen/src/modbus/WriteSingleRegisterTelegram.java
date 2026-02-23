@@ -2,58 +2,28 @@ package modbus;
 
 import com.fazecast.jSerialComm.SerialPort;
 import java.util.List;
-import static modbus.AbstractModbusTelegram.getHiByte;
-import static modbus.AbstractModbusTelegram.getLoByte;
+import java.util.concurrent.TimeUnit;
 import serial.SimpleSerial;
 
-/**
- *
- * @author robot
- */
-public class WriteSingleRegisterTelegram {
-    
-    private final int startingAddress, quantityOfCoils; //Range
+public class WriteSingleRegisterTelegram extends AbstractModbusTelegram {
 
-    public ReadCoilTelegram(
+    public WriteSingleRegisterTelegram(
             SimpleSerial serial, int devAdr,
-            int startingAddress, int quantityOfCoils) 
+            int regAdr, int value) 
     {
-        super(
-            serial, devAdr, 1, 
-            calcXmtData(startingAddress, quantityOfCoils),
-                5 + quantityOfCoils/8 + ((quantityOfCoils%8>0) ? 1 : 0)
-            );
-
-        this.startingAddress = startingAddress;
-        this.quantityOfCoils = quantityOfCoils;
+        super(serial, devAdr, 6, calcXmtData(regAdr, value), 8);
     }   
     
-    private static byte[] calcXmtData(int startingAddress, int quantityOfCoils) {
-        final byte[] xmt = new byte[4];
-        xmt[0] = getHiByte(startingAddress);
-        xmt[1] = getLoByte(startingAddress);
-        
-        xmt[2] = getHiByte(quantityOfCoils);
-        xmt[3] = getLoByte(quantityOfCoils);
-        
-        return xmt;
-    }
-
-    public boolean getCoil(int coilAdr) throws Exception {
-        if(coilAdr < startingAddress || coilAdr >= startingAddress+quantityOfCoils) {
-            throw new Exception("coil address is outside valid range!");   
-        }
-
-        final byte[] rcvData = getRcvData();
-        final int 
-                byteIndex = (coilAdr - startingAddress) / 8 + 1,
-                bitIndex = (coilAdr - startingAddress) % 8,
-                maske = 1 << bitIndex;
-        
-        return (rcvData[byteIndex] & maske) > 0;
-    }
-            
-    public static void main(String[] args) {
+   private static byte[] calcXmtData(int regAdr, int value) {
+   	final byte[] xmt = new byte[4];
+        xmt[0] = getHiByte(regAdr);
+        xmt[1] = getLoByte(regAdr);
+        xmt[2] = getHiByte(value);
+        xmt[3] = getLoByte(value);
+        return xmt; 
+   }
+   
+   public static void main(String[] args) {
         try {
             final List<String> portNames = SimpleSerial.findSerialPortNames();
             for (final String portName : portNames) {
@@ -64,29 +34,28 @@ public class WriteSingleRegisterTelegram {
             try (final SimpleSerial serial = new SimpleSerial("ttyUSB0"))
             {
                 serial.open();
-                serial.setComPortParameters(57600, 8, SerialPort.TWO_STOP_BITS, SerialPort.NO_PARITY);
+                serial.setComPortParameters(
+                        57600, 8, SerialPort.TWO_STOP_BITS, SerialPort.NO_PARITY);
                 serial.setComPortTimeouts(5_000);
                 
-                WriteSingleCoilTelegram wsct = 
-                        new WriteSingleCoilTelegram(serial, 2, 1, true);
-                wsct.send();
-                wsct.receive();
+                final long millis1 = 
+                        TimeUnit.MILLISECONDS.convert(System.nanoTime(), TimeUnit.NANOSECONDS);
                 
-                wsct = 
-                        new WriteSingleCoilTelegram(serial, 2, 3, true);
-                wsct.send();
-                wsct.receive();
-                
-                final ReadCoilTelegram rct = new ReadCoilTelegram(serial, 2, 0, 4);
-                rct.send();
-                rct.receive();
-                
-                for (int coilAdr=0; coilAdr<4; coilAdr++) {
-                    System.out.format("coil %d 0 %b%n",coilAdr, rct.getCoil(coilAdr));
+                for(int i=0; i<999_999_999;i++) {
+                    final long millis2 = 
+                            TimeUnit.MILLISECONDS.convert(System.nanoTime(), TimeUnit.NANOSECONDS);
+                    
+                    WriteSingleRegisterTelegram wsrt = 
+                            new WriteSingleRegisterTelegram(
+                                    serial, 2, 2, (int)((millis2-millis1) / 100) % 10_000);
+                    
+                    wsrt.send();
+                    wsrt.receive();
+                    Thread.sleep(25);
                 }
             }
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
+            catch (Exception ex) { ex.printStackTrace();}
+        } 
+        catch (Exception ex) { ex.printStackTrace();}
     }
 }

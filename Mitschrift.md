@@ -228,4 +228,18 @@ In der Java Virtual Machine gibt es keine SerialPorts sonder nur NetzwerkPorts
     - Modbus IP
       - über ein Netzwerk
   - "Dezentrale Peripherie" oder "Intelligente Klemme"
-  - 
+  -
+
+# Networking -Netzwerktechnik - Internet
+
+![ISO-OSI-Schichtmodell](images/ISO-OSI-Schichtmodell.png)
+
+- Grundlagen
+  - ISO - OSI - Model bekannt ???? [Wikipedia: ISO-OSI-Schichtmodell](https://de.wikipedia.org/wiki/OSI-Modell)
+    - beschreibt wie man über ein nezwerk komuniziert
+  - Ethernet [Wikipedia: Ethernet](https://de.wikipedia.org/wiki/Ethernet)
+    - Hardware
+      - Kabel
+        - TP 4x2 verdrillte Leitungen
+        - Koaxkabel
+        - LWL

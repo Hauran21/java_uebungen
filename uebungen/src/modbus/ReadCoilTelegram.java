@@ -27,7 +27,7 @@ public class ReadCoilTelegram extends AbstractModbusTelegram {
     }   
     
     private static byte[] calcXmtData(int startingAddress, int quantityOfCoils) {
-        final byte[] xmt = new byte[4];
+        final byte[] xmt = new byte[4]; 
         xmt[0] = getHiByte(startingAddress);
         xmt[1] = getLoByte(startingAddress);
         
