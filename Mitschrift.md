@@ -227,8 +227,7 @@ In der Java Virtual Machine gibt es keine SerialPorts sonder nur NetzwerkPorts
       - serialle Schnittstelle
     - Modbus IP
       - über ein Netzwerk
-  - "Dezentrale Peripherie" oder "Intelligente Klemme"
-  -
+  - "Dezentrale Peripherie" oder "Intelligente Klemme" 
 
 # Networking -Netzwerktechnik - Internet
 
@@ -240,6 +239,43 @@ In der Java Virtual Machine gibt es keine SerialPorts sonder nur NetzwerkPorts
   - Ethernet [Wikipedia: Ethernet](https://de.wikipedia.org/wiki/Ethernet)
     - Hardware
       - Kabel
-        - TP 4x2 verdrillte Leitungen
+        - TP 4x2 verdrillte Leitungen -> "Twisted pair"
         - Koaxkabel
         - LWL
+
+![Netzwerk](images/netzwerk.png)
+
+# Was ist "Internet"?
+- Dezentralisieren -> z.B. bei einem Angriff ist nicht die ganze verbindung weg
+- in dunkellila -> routing / backbone ==> IP
+- Arpanet -> erstes netzwerk, rein militärisch
+  - wurde zu Internet 
+  
+![IP](images/USAIP.png)
+![Ip](images/ip.png)
+![senden](images/senden.png)
+
+# Dienst im Internet
+- IP
+  - -> Haus
+- Port 
+  - -> welche wohnung genau
+  - 0-65555
+- TCP
+  - rechner reden bevor etwas gesendet wird
+  - wenn ein packet verloren geht kann das packet beim sender widerangefordert werden
+- http -> Port 80 
+- https -> 443
+- www
+- http
+- smtp
+- pop3
+- imap
+- telnet -> unverschlüsselt
+- ssh -> verschlüsselt
+
+- Server
+  - bezeichnung für software
+  - stellt im internet einen dienst zur verfügung
+- Client
+  - Verwendte die im internet zur verfügung gestellten dienste 
