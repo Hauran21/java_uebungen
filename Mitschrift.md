@@ -278,4 +278,12 @@ In der Java Virtual Machine gibt es keine SerialPorts sonder nur NetzwerkPorts
   - bezeichnung für software
   - stellt im internet einen dienst zur verfügung
 - Client
-  - Verwendte die im internet zur verfügung gestellten dienste 
+  - Verwendte die im internet zur verfügung gestellten dienste
+
+# Client 
+- Server
+  - Apache 
+  - IIS
+- Client
+  - Firefox
+
