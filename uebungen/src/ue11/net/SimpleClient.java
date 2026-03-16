@@ -2,6 +2,7 @@ package ue11.net;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.InetAddress;
@@ -12,7 +13,56 @@ import java.net.Socket;
  * @author robot
  */
 public class SimpleClient {
+    
+    public static String sendRequestandReceiveResponse(
+        String host, int port, String request) throws IOException {
+        
+        // Namensauflösung => Host name => Ip Adresse (DNS)
+        final InetAddress inetAddress = InetAddress.getByName(host);
+            
+        try (Socket socket = new Socket(inetAddress, port)) {
+            // %%%% REQUEST %%%%
+           
+            final BufferedWriter writer =
+                new BufferedWriter(
+                    new OutputStreamWriter(socket.getOutputStream(), "utf8"));
+            
+            writer.write(request);
+            writer.newLine();
+            writer.newLine();
+            writer.flush();
+            
+            // %%%% RESPONSE %%%%
+            final  BufferedReader reader = 
+                    new BufferedReader(
+                        new InputStreamReader(socket.getInputStream()));
+
+            // Versuche Antwort zu lesen#
+            String line;
+            StringBuilder sbResponse = new StringBuilder();
+
+            while ((line = reader.readLine()) != null)
+                sbResponse.append(line).append("\n");
+            return sbResponse.toString();
+        }
+        catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+    
     public static void main(String[] args) {
+        /*
+        try {
+            final String response = 
+                    SimpleClient.sendRequestandReceiveResponse("www.htl-kaindorf.at", 80, "GET /index.html HTTP/1.0");
+            System.out.println(response);       
+             
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        */
+        
+        /*
         try {
             // Namensauflösung => Host name => Ip Adresse (DNS)
             final InetAddress adr1 = 
@@ -36,7 +86,7 @@ public class SimpleClient {
                             new OutputStreamWriter(socket.getOutputStream(), "utf8"));
                 
                 // Text senden
-                writer.write("sigma");
+                writer.write("GET /index.html HTTP/1.0");
                 writer.newLine();
                 writer.newLine();
                 writer.flush();
@@ -49,13 +99,19 @@ public class SimpleClient {
                 
                 // Versuche Antwort zu lesen#
                 String line;
+                StringBuilder sbResponse = new StringBuilder();
+                
                 while ((line = reader.readLine()) != null)
-                    System.out.println(line);
+                    sbResponse.append(line).append("\n");
+                final String response = sbResponse.toString();
+                
+                System.out.println("sigma");
             }
             //socket.close();
             
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+        */
     }
 }

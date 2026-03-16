@@ -286,4 +286,5 @@ In der Java Virtual Machine gibt es keine SerialPorts sonder nur NetzwerkPorts
   - IIS
 - Client
   - Firefox
-
+  
+> stellen Sie sich vor sie sein server und es gibt viele clients die etwas von ihnen wollen - Harnisch
