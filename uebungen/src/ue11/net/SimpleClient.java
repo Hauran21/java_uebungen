@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
 
 /**
  *
@@ -25,7 +26,7 @@ public class SimpleClient {
            
             final BufferedWriter writer =
                 new BufferedWriter(
-                    new OutputStreamWriter(socket.getOutputStream(), "utf8"));
+                    new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8));
             
             writer.write(request);
             writer.newLine();
@@ -35,7 +36,7 @@ public class SimpleClient {
             // %%%% RESPONSE %%%%
             final  BufferedReader reader = 
                     new BufferedReader(
-                        new InputStreamReader(socket.getInputStream()));
+                        new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
 
             // Versuche Antwort zu lesen#
             String line;
@@ -44,13 +45,22 @@ public class SimpleClient {
             while ((line = reader.readLine()) != null)
                 sbResponse.append(line).append("\n");
             return sbResponse.toString();
-        }
-        catch (Exception ex) {
-            ex.printStackTrace();
-        }
+        }        
     }
     
     public static void main(String[] args) {
+        
+        try {
+            final String response = 
+                SimpleClient.sendRequestandReceiveResponse(
+                    "127.0.0.1", 4711, "Hallo server");
+            
+            System.out.println("Die Antwort ist: " + response);
+            
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        
         /*
         try {
             final String response = 
